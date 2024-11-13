@@ -3,6 +3,12 @@ variable "cidr_block" {
   default     = "10.0.0.0/16"
 }
 
+variable "vpc_name" {
+  type        = string
+  description = "The name given to the VPC"
+  default     = "vpc_module"
+}
+
 variable "subnets" {
   type = map(object({
     cidr_block        = string
@@ -15,3 +21,5 @@ variable "subnets" {
     }
   }
 }
+
+variable 
